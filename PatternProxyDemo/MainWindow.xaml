@@ -1,0 +1,24 @@
+﻿<Window x:Class="PatternProxyDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatternProxyDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+  <DockPanel LastChildFill="True">
+    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+      <TextBox Name="txtUser" Height="25" Width="100" Text="Hansi"/>
+      <Button Content="Connect" Height="25" Name="btnConnect" Click="BtnConnect_Clicked" Margin="5,0"/>
+      <Button Content="Disconnect" Height="25" Name="btnDisonnect" Click="BtnDisconnect_Clicked"/>
+    </StackPanel>
+    <TextBox DockPanel.Dock="Top" Name="txtQuery" Height="25" VerticalContentAlignment="Center" Text="select * from Persons"/>
+    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+      <Button Content="Select" Height="25" Width="50" IsEnabled="False" Name="btnSelect" Click="BtnSelect_Clicked" Margin="5,0"/>
+      <Button Content="Insert" Height="25" Width="50" IsEnabled="False" Name="btnInsert" Click="BtnInsert_Clicked" Margin="5,0"/>
+      <Button Content="Delete" Height="25" Width="50" IsEnabled="False" Name="btnDelete" Click="BtnDelete_Clicked" Margin="5,0"/>
+      <Button Content="Clear" Height="25" Width="50" Click="BtnClear_Clicked" Margin="5,0"/>
+    </StackPanel>
+    <ListBox Name="lstLogs"/>
+  </DockPanel>
+</Window>
